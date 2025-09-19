@@ -1,0 +1,390 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="description" content="Portfolio of a software professional. Projects, skills, experience and contact to get hired." />
+    <title>Dedek Rahmat — Control Systems / PLC Engineer</title>
+
+    <!-- Replace Dedek Rahmat, [Location], and placeholders -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Dedek Rahmat",
+        "jobTitle": "Control Systems Engineer",
+        "url": "https://your-website.example",
+        "sameAs": [
+            "https://github.com/your-username",
+            "https://linkedin.com/in/your-username"
+        ],
+        "worksFor": {
+            "@type": "Organization",
+            "name": "[Optional current employer]"
+        }
+    }
+    </script>
+
+    <style>
+        :root{
+            --bg:#0f1724; --card:#0b1220; --muted:#98a0b3; --accent:#6ee7b7;
+            --glass: rgba(255,255,255,0.03);
+            font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+            --ease: cubic-bezier(.2,.9,.25,1);
+        }
+        *{box-sizing:border-box}
+        html,body{height:100%}
+        body{
+            margin:0; background:linear-gradient(180deg,#071025 0%, #071a2a 60%); color:#e6eef6;
+            -webkit-font-smoothing:antialiased; -moz-osx-font-smoothing:grayscale;
+            line-height:1.45; padding:32px;
+        }
+        .container{max-width:1000px;margin:0 auto}
+        header{
+            display:flex; gap:16px; align-items:center; justify-content:space-between; margin-bottom:28px;
+        }
+        .brand{display:flex; gap:12px; align-items:center}
+        .avatar{
+            width:64px;height:64px;border-radius:12px;background:linear-gradient(135deg,var(--accent),#60a5fa);
+            display:grid;place-items:center;font-weight:700;color:#042028; font-size:20px;
+            box-shadow:0 4px 18px rgba(2,6,23,0.6);
+            transform-origin:center;
+            /* floating animation */
+            animation: float 6s ease-in-out infinite;
+        }
+        @keyframes float{
+            0% { transform: translateY(0) rotate(-1deg); }
+            50% { transform: translateY(-6px) rotate(1deg); }
+            100% { transform: translateY(0) rotate(-1deg); }
+        }
+        h1{margin:0;font-size:22px}
+        p.lead{color:var(--muted);margin:6px 0 0;font-size:14px}
+        nav a{color:var(--muted);text-decoration:none;padding:8px;border-radius:8px}
+        nav a:hover{color:var(--accent);background:var(--glass)}
+        main{display:grid; grid-template-columns:1fr 340px; gap:24px; align-items:start}
+        .card{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01)); padding:18px;border-radius:12px; box-shadow:0 6px 30px rgba(2,6,23,0.6)}
+        /* hero */
+        .hero{display:flex; gap:16px; align-items:flex-start}
+        .bio{flex:1}
+        .cta{display:flex; gap:8px; margin-top:14px}
+        .btn{
+            background:transparent;border:1px solid rgba(255,255,255,0.06); color:var(--accent); padding:10px 12px;border-radius:10px;
+            text-decoration:none;font-weight:600;cursor:pointer; transition:transform 220ms var(--ease), box-shadow 220ms var(--ease);
+        }
+        .btn:hover{transform:translateY(-4px); box-shadow:0 10px 30px rgba(14,165,175,0.08)}
+        .btn.secondary{color:var(--muted);border-style:solid; border-color:transparent; background:rgba(255,255,255,0.02)}
+        .skills{display:grid; gap:10px; margin-top:12px}
+        .skill{display:flex; justify-content:space-between; align-items:center; gap:12px; opacity:0; transform:translateY(8px); transition:opacity 480ms var(--ease), transform 480ms var(--ease)}
+        .skill.visible{opacity:1; transform:translateY(0)}
+        .progress{height:8px;background:#07121a;border-radius:999px;flex:1;overflow:hidden;margin-left:12px}
+        .progress > i{display:block;height:100%;background:linear-gradient(90deg,var(--accent),#60a5fa); border-radius:999px; width:0%; transition:width 900ms var(--ease)}
+        /* projects */
+        .projects{display:grid; gap:12px}
+        .project{display:flex; gap:12px; align-items:center; opacity:0; transform:translateY(10px); transition:opacity 540ms var(--ease), transform 540ms var(--ease)}
+        .project.visible{opacity:1; transform:translateY(0)}
+        .thumb{width:76px;height:52px;border-radius:8px;background:linear-gradient(135deg,#0ea5a5,#7c3aed);display:grid;place-items:center;color:#041014;font-weight:700; transition:transform 300ms var(--ease), box-shadow 300ms var(--ease)}
+        .thumb:hover{transform:translateY(-6px) scale(1.03); box-shadow:0 18px 40px rgba(12,60,80,0.18)}
+        .meta{flex:1}
+        .meta h4{margin:0 0 6px 0;font-size:15px}
+        .meta p{margin:0;color:var(--muted);font-size:13px}
+        aside .card + .card{margin-top:16px}
+        footer{margin-top:28px;color:var(--muted);font-size:13px;text-align:center}
+        /* responsive */
+        @media (max-width:900px){
+            main{grid-template-columns:1fr; padding-bottom:40px}
+            aside{order:2}
+        }
+        /* contact form */
+        form label{display:block;font-size:13px;color:var(--muted);margin-bottom:6px}
+        input,textarea{width:100%;padding:10px;border-radius:8px;background:#071420;border:1px solid rgba(255,255,255,0.03);color:inherit}
+        textarea{min-height:110px;resize:vertical}
+        .row{display:flex;gap:10px}
+        .row > *{flex:1}
+        .muted{color:var(--muted);font-size:13px}
+        .social{display:flex; gap:8px; margin-top:8px}
+        .icon{display:inline-grid; place-items:center; width:40px;height:40px;border-radius:10px;background:rgba(255,255,255,0.02); transition:transform 220ms var(--ease)}
+        .icon:hover{transform:translateY(-4px) scale(1.05)}
+        /* reveal utility */
+        .reveal{opacity:0; transform:translateY(8px); transition:opacity 540ms var(--ease), transform 540ms var(--ease)}
+        .reveal.visible{opacity:1; transform:none}
+        /* small glowing accent on intro */
+        #intro{position:relative; overflow:visible}
+        #intro::after{content:""; position:absolute; left:-6px; right:-6px; bottom:-6px; height:6px; border-radius:6px; background:linear-gradient(90deg, rgba(110,231,183,0.06), rgba(96,165,250,0.06)); filter:blur(8px); opacity:0; transform:translateY(6px); transition:opacity 560ms var(--ease), transform 560ms var(--ease)}
+        #intro.visible::after{opacity:1; transform:translateY(0)}
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="brand">
+                <div class="avatar" aria-hidden="true">YN</div>
+                <div>
+                    <h1>Dedek Rahmat</h1>
+                    <p class="lead">Software Developer — [Location] • Open to opportunities</p>
+                </div>
+            </div>
+            <nav aria-label="Primary">
+                <a href="#projects">Projects</a>
+                <a href="#skills">Skills</a>
+                <a href="#contact">Contact</a>
+            </nav>
+        </header>
+
+        <main>
+            <section>
+                <article class="card hero" aria-labelledby="intro">
+                    <div class="bio">
+                        <h2 id="intro">Hi — I'm Dedek Rahmat. I optimize production systems with PLC programming and controls engineering.</h2>
+                        <p class="muted">With over 3 years of experience in PLC programming, installation, and troubleshooting, I specialize in optimizing production systems for high efficiency. Skilled in ladder logic analysis, HMI/SCADA integration, and on-site commissioning, I deliver targeted solutions that improve machine performance and productivity while keeping projects on budget.</p>
+
+                        <div class="cta" role="group" aria-label="Call to action">
+                            <a class="btn" href="resume.pdf" download>Download Resume</a>
+                            <button class="btn secondary" onclick="scrollToContact()">Contact me</button>
+                        </div>
+
+                        <section id="skills" aria-labelledby="skills-heading" style="margin-top:18px">
+                            <h3 id="skills-heading" style="margin:0 0 8px 0">Skills</h3>
+                            <div class="skills" aria-hidden="false">
+                                <div class="skill"><strong>PLC Programming (Siemens / Rockwell)</strong><div class="progress" title="Expert"><i data-level="90" style="width:0%"></i></div></div>
+                                <div class="skill"><strong>Ladder Logic & Troubleshooting</strong><div class="progress" title="Expert"><i data-level="92" style="width:0%"></i></div></div>
+                                <div class="skill"><strong>HMI / SCADA Integration</strong><div class="progress" title="Advanced"><i data-level="82" style="width:0%"></i></div></div>
+                                <div class="skill"><strong>Industrial Networks (Modbus, Ethernet/IP)</strong><div class="progress" title="Advanced"><i data-level="80" style="width:0%"></i></div></div>
+                                <div class="skill"><strong>Commissioning & On-site Support</strong><div class="progress" title="Advanced"><i data-level="78" style="width:0%"></i></div></div>
+                            </div>
+                        </section>
+                    </div>
+
+                    <aside aria-label="Highlights" style="width:280px">
+                        <div style="display:flex;flex-direction:column;gap:12px">
+                            <div class="card" style="padding:14px;">
+                                <strong>Availability</strong>
+                                <p class="muted" style="margin:8px 0 0">Open to full-time, contract, and freelance roles. Comfortable with remote and hybrid setups.</p>
+                            </div>
+
+                            <div class="card" style="padding:12px;">
+                                <strong>Contact</strong>
+                                <p class="muted" style="margin:8px 0 0">Email: <a href="mailto:dedekrossi46@gmail.com" style="color:var(--accent)">dedekrossi46@gmail.com</a></p>
+                                <div class="social" aria-hidden="false" style="margin-top:10px">
+                                    <a class="icon" href="https://github.com/your-username" target="_blank" rel="noopener noreferrer" title="GitHub">
+                                        <!-- simple GitHub mark -->
+                                        <svg width="18" height="18" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8a8 8 0 005.47 7.59c.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2 0.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52 0-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.22 2.2.82A7.6 7.6 0 018 4.67c.68.003 1.36.092 2 .27 1.52-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.28.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8 8 0 0016 8c0-4.42-3.58-8-8-8z"></path></svg>
+                                    </a>
+                                    <a class="icon" href="https://linkedin.com/in/your-username" target="_blank" rel="noopener noreferrer" title="LinkedIn">
+                                        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M4.98 3.5C3.88 3.5 3 4.38 3 5.48s.88 1.98 1.98 1.98c1.1 0 1.98-.88 1.98-1.98S6.08 3.5 4.98 3.5zM3.5 8.98h3v11.02h-3V8.98zM9.5 8.98h2.88v1.5h.04c.4-.76 1.38-1.56 2.84-1.56 3.04 0 3.6 2.01 3.6 4.62v6.46h-3V14.2c0-1.44-.03-3.28-2-3.28-2 0-2.3 1.55-2.3 3.16v5.18h-3V8.98z"/></svg>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </aside>
+                </article>
+
+                <article id="projects" class="card" style="margin-top:18px">
+                    <h3 style="margin-top:0">Selected Projects</h3>
+                    <p class="muted" style="margin-bottom:12px">Concise project descriptions with links to live demos and repos. Replace with your own work.</p>
+
+                    <div class="projects">
+                        <div class="project">
+                            <div class="thumb" aria-hidden="true">App</div>
+                            <div class="meta">
+                                <h4><a href="#" style="color:inherit;text-decoration:none">Project One — SaaS Dashboard</a></h4>
+                                <p class="muted">Built a scalable dashboard with React, TypeScript and an Express API. Focused on performance and accessibility. <a href="#" style="color:var(--accent)">View repo</a></p>
+                            </div>
+                        </div>
+
+                        <div class="project">
+                            <div class="thumb" aria-hidden="true">API</div>
+                            <div class="meta">
+                                <h4><a href="#" style="color:inherit;text-decoration:none">Project Two — Public API</a></h4>
+                                <p class="muted">Designed and implemented RESTful APIs with Node.js, JWT auth, rate limiting and CI/CD pipelines. <a href="#" style="color:var(--accent)">Read more</a></p>
+                            </div>
+                        </div>
+
+                        <div class="project">
+                            <div class="thumb" aria-hidden="true">Site</div>
+                            <div class="meta">
+                                <h4><a href="#" style="color:inherit;text-decoration:none">Project Three — E-commerce POC</a></h4>
+                                <p class="muted">End-to-end proof of concept: serverless functions, Stripe integration, and edge-rendered storefront. <a href="#" style="color:var(--accent)">Demo</a></p>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="card" style="margin-top:18px" aria-labelledby="experience">
+                    <h3 id="experience" style="margin-top:0">Experience & Impact</h3>
+                    <div class="muted" style="margin:12px 0 0 0">
+                        <section style="margin-bottom:12px">
+                            <h4 style="margin:6px 0">Engineer — Asus Service Indonesia, Batam</h4>
+                            <div class="muted" style="font-size:13px">December 2024 – Present</div>
+                            <ul style="padding-left:18px; margin:8px 0 0 0">
+                                <li>Diagnose and repair electronic faults in laptops and desktops, focusing on power circuits and mainboard issues.</li>
+                                <li>Repair multilayer PCBs using soldering and BGA rework techniques under ESD-safe standards.</li>
+                                <li>Developed a vision system (camera + software) to detect and classify defective motherboards.</li>
+                                <li>Completed an AGV automation project for autonomous material transport from warehouse to production line.</li>
+                                <li>Performed testing, calibration, and optimization of electronic and automation systems to ensure reliability.</li>
+                                <li>Applied electrical and control engineering principles to improve repair accuracy and production efficiency.</li>
+                            </ul>
+                        </section>
+
+                        <section style="margin-bottom:12px">
+                            <h4 style="margin:6px 0">PLC Technician — Cladtek BI Metal Manufacturing, Batam</h4>
+                            <div class="muted" style="font-size:13px">July 2024 – December 2024</div>
+                            <ul style="padding-left:18px; margin:8px 0 0 0">
+                                <li>Installed, programmed, and maintained PLC systems to optimize production operations.</li>
+                                <li>Diagnosed and repaired automated control systems to ensure machine performance and efficiency.</li>
+                                <li>Developed and modified PLC programs, and designed HMI interfaces (Weintek, C#, Python).</li>
+                                <li>Prepared technical proposals and BOMs; assisted with budgeting and project forecasting.</li>
+                                <li>Performed electrical troubleshooting on control panels, sensors, actuators, and motor drives.</li>
+                                <li>Read and interpreted electrical schematics for installation and maintenance tasks.</li>
+                                <li>Conducted routine inspections and preventive maintenance on low-voltage systems, ensuring code compliance and safety.</li>
+                            </ul>
+                        </section>
+
+                        <section>
+                            <h4 style="margin:6px 0">Electrical Maintenance — Tenaris Hydril Indonesia, Batam</h4>
+                            <div class="muted" style="font-size:13px">April 2024 – June 2024</div>
+                            <ul style="padding-left:18px; margin:8px 0 0 0">
+                                <li>Assisted continuous improvement efforts at the maintenance plant and maintained strong client relationships.</li>
+                                <li>Installed and repaired hydraulic components; replaced faulty electrical elements of machines.</li>
+                                <li>Modified PLC programs, installed wiring to safety standards, and trained maintenance staff on PLC systems.</li>
+                                <li>Performed testing, calibration, and interpretation of electrical diagrams to support diagnostics and installations.</li>
+                                <li>Managed electrical spare parts and developed clear work instructions for improved productivity.</li>
+                            </ul>
+                        </section>
+                    </div>
+                </article>
+
+                <article id="contact" class="card" style="margin-top:18px" aria-labelledby="contact-heading">
+                    <h3 id="contact-heading" style="margin-top:0">Get in touch</h3>
+                    <p class="muted">Use the form to send a message — it opens your email client. You can also email directly to <strong>dedekrossi46@gmail.com</strong>.</p>
+
+                    <form onsubmit="composeMail(event)" novalidate style="margin-top:12px">
+                        <div class="row">
+                            <div>
+                                <label for="name">Name</label>
+                                <input id="name" name="name" required placeholder="Your name">
+                            </div>
+                            <div>
+                                <label for="role">Role</label>
+                                <input id="role" name="role" placeholder="Hiring manager, recruiter...">
+                            </div>
+                        </div>
+
+                        <label for="message" style="margin-top:10px">Message</label>
+                        <textarea id="message" name="message" placeholder="Short message about the role or opportunity" required></textarea>
+
+                        <div style="display:flex;gap:8px;margin-top:10px">
+                            <button class="btn" type="submit">Email me</button>
+                            <button class="btn secondary" type="button" onclick="copyEmail()">Copy email</button>
+                        </div>
+                        <p class="muted" style="margin-top:8px">Tip: include company and role for faster response.</p>
+                    </form>
+                </article>
+            </section>
+
+            <aside>
+                <div class="card">
+                    <h4 style="margin-top:0">Availability & Rates</h4>
+                    <p class="muted">Open for full-time and contract. Rates available on request — include scope and timeline.</p>
+                </div>
+
+                <div class="card" style="margin-top:16px">
+                    <h4 style="margin-top:0">Tech stack</h4>
+                    <p class="muted" style="margin:8px 0 0">Siemens S7 • Allen‑Bradley (RSLogix/Studio 5000) • Ladder Logic • HMI/SCADA • Modbus • Ethernet/IP • PLC commissioning</p>
+                </div>
+            </aside>
+        </main>
+
+        <footer>
+            <p>© <span id="year"></span> Dedek Rahmat — Portfolio • Built for hiring teams</p>
+        </footer>
+    </div>
+
+    <script>
+        // small helpers: replace placeholders in file with your info
+        document.getElementById('year').textContent = new Date().getFullYear();
+
+        function scrollToContact(){
+            document.getElementById('contact').scrollIntoView({behavior:'smooth', block:'center'});
+        }
+
+        function composeMail(evt){
+            evt.preventDefault();
+            const name = encodeURIComponent(document.getElementById('name').value || 'No name');
+            const role = encodeURIComponent(document.getElementById('role').value || '');
+            const msg = encodeURIComponent(document.getElementById('message').value || '');
+            const to = 'dedekrossi46@gmail.com'; // change to your email
+            const subject = encodeURIComponent(`[Portfolio] Opportunity from ${role || name}`);
+            const body = encodeURIComponent(`Name: ${name}\nRole: ${role}\n\nMessage:\n${msg}`);
+            // open user's mail client
+            window.location.href = `mailto:${to}?subject=${subject}&body=${body}`;
+        }
+
+        function copyEmail(){
+            const email = 'dedekrossi46@gmail.com';
+            if(navigator.clipboard){
+                navigator.clipboard.writeText(email).then(()=>alert('Email copied to clipboard'));
+            }else{
+                const t = document.createElement('textarea');
+                t.value = email; document.body.appendChild(t); t.select();
+                try{ document.execCommand('copy'); alert('Email copied to clipboard'); }catch(e){ alert(email); }
+                t.remove();
+            }
+        }
+
+        // --- Animation & reveal: intersection observer + progress bar animation
+        document.addEventListener('DOMContentLoaded', ()=> {
+            const revealElems = [
+                document.querySelector('.avatar'),
+                document.getElementById('intro'),
+                ...Array.from(document.querySelectorAll('.cta > *')),
+                ...Array.from(document.querySelectorAll('.skill')),
+                ...Array.from(document.querySelectorAll('.project'))
+            ].filter(Boolean);
+
+            // add initial utility class
+            revealElems.forEach(el => el.classList.add('reveal'));
+
+            const io = new IntersectionObserver((entries, obs) => {
+                entries.forEach(entry => {
+                    if(!entry.isIntersecting) return;
+                    const el = entry.target;
+                    el.classList.add('visible');
+                    // special handling: skills -> animate inner progress
+                    if(el.classList.contains('skill')){
+                        const bar = el.querySelector('i');
+                        if(bar){
+                            const target = bar.dataset.level || (bar.getAttribute('style')||'').match(/(\d+)%/)?.[1] || 80;
+                            // small stagger per skill
+                            const delay = (Array.from(el.parentElement.children).indexOf(el)) * 120;
+                            setTimeout(()=> bar.style.width = `${target}%`, delay);
+                            // mark visible class for the child skill
+                            el.classList.add('visible');
+                        }
+                    }
+                    // projects: stagger thumbnails slightly
+                    if(el.classList.contains('project')){
+                        const thumb = el.querySelector('.thumb');
+                        if(thumb) thumb.style.transitionDelay = '90ms';
+                        el.classList.add('visible');
+                    }
+                    obs.unobserve(el);
+                });
+            }, {threshold:0.15});
+
+            revealElems.forEach(el => io.observe(el));
+
+            // ensure contact and aside cards reveal when scrolled
+            document.querySelectorAll('article.card, aside .card, #contact, footer').forEach(el => {
+                if(!el.classList.contains('reveal')) el.classList.add('reveal');
+                io.observe(el);
+            });
+
+            // small entrance for header links
+            document.querySelectorAll('nav a').forEach((a,i)=>{
+                a.style.opacity = 0;
+                setTimeout(()=> { a.style.transition = 'opacity 480ms var(--ease)'; a.style.opacity = 1; }, 120 * i);
+            });
+        });
+    </script>
+</body>
+</html>
